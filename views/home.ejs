@@ -1,0 +1,32 @@
+<%- include('partials/header'); -%>
+    <div class="mx-auto" style="width: 600px;">
+        <h3>Whose food is your champion? <br>Enter your city and keyword, start a race now.</h3>
+    </div>
+    <form action="/" method="post">
+        <div class="input-group-prepend" style="position: relative; top: 200px;">
+            <div class="form-row mx-auto">
+                <div class="col-lg"> 
+                    <span class="input-group-text" id="inputGroup-sizing-lg" style="width: 300px;">Where are you?</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="city" placeholder="City, State(Boston,MA)">
+                </div>
+                <div class="col-lg">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">What food do you like?</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="term" placeholder="Spicy">
+                </div>
+                <div class="col-lg">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">How many restaurants to include in race?</span>
+                    <select class="form-control custom-select" id="inputGroupSelect03" aria-label="Example select with button addon" name="number" >
+                        <option selected>2</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="mx-auto" style="width: 200px; position: relative; top: 230px;">
+            <input type="submit" class="btn btn-danger btn-lg" name="go" value="Start race">
+        </div>
+    </form>
+<%- include('partials/footer'); -%>

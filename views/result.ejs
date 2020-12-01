@@ -1,0 +1,14 @@
+<%- include('partials/header'); -%>
+    <h1 class="invisible"><%= title %></h1>
+    <div>
+        <h1 class="display-3 text-center">Champion of your <%= city %> <%= term %> food race is:</h1>
+        <div>
+            <img src="<%= winner_image %>" class="rounded mx-auto d-block" alt="winner image">
+            <b><h1 class="font-weight-bold text-center"><%= final_winner %></h1></b>
+            <a href="<%= winner_web %>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Go to its website</a>
+            <form action="/">
+                <input type="submit" class="btn btn-danger btn-lg" value="start new race" />
+            </form>
+        </div>
+    </div>
+<%- include('partials/footer'); -%>

@@ -1,0 +1,21 @@
+<%- include('partials/header'); -%>
+    <div class="mx-auto" style="width: 600px;">
+        <h3>Whose food do you prefer? Click to choose.</h3>
+    </div>
+    <form action="/race" method="post">
+        <input type="hidden" name="search_id" value="<%= search_id %>">
+        <div id='food1' class="rounded float-left" >
+            <button name="win" value="<%= food1_name %>"><img class="rounded float-left" name="<%= food1_name %>" src="<%= food1_img %>" alt="image of candidate restaurant 1"></button>
+            <h2><%= food1_name %></h2>
+            <a href="<%= food1_web %>" target="_blank" >More about it</a>
+        </div>
+        <div id='food2' class="rounded float-right" >
+            <button name="win" value="<%= food2_name %>"><img class="rounded float-right" name="<%= food2_name %>" src="<%= food2_img %>" alt="image of candidate restaurant 2"></button>
+            <h2><%= food2_name %></h2>
+            <a href="<%= food2_web %>" target="_blank" >More about it</a>
+        </div>
+    </form>
+    <script>
+        $('a[href="/result"]').removeClass("disabled");
+    </script>
+<%- include('partials/footer'); -%>

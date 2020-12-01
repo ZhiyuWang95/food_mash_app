@@ -1,0 +1,13 @@
+<script>
+    let username = $('a#username_a');
+    let log = $('li#login_li');
+    if(username.text()!='')
+    {
+        $('a#username_a').removeClass('invisible');
+        $('a#username_a').attr("href","/user");;
+        $('li#signup_li').addClass('invisible');
+        log.html("<a class=\"nav-link\" href=\"/logout\">Logout</a>");
+    }
+</script>
+</body>
+</html>
